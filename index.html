@@ -47,6 +47,39 @@
         }
     </script>
     <style>
+
+        /* =========================================================
+           LUMIÈRE — HIDE SCROLLBARS, KEEP SCROLLING ENABLED
+           Matches the clean preview behavior used by Templates 1 & 2.
+           ========================================================= */
+        html, body {
+            -ms-overflow-style: none !important;  /* IE / old Edge */
+            scrollbar-width: none !important;     /* Firefox */
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            width: 0 !important;
+            height: 0 !important;
+            display: none !important;
+            background: transparent !important;
+        }
+
+        /* Also hide bars on any internal scrollable editor/panel without
+           disabling wheel, trackpad, keyboard, or touch scrolling. */
+        * {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        *::-webkit-scrollbar {
+            width: 0 !important;
+            height: 0 !important;
+            display: none !important;
+            background: transparent !important;
+        }
+
+
         * { box-sizing: border-box; }
         body { 
             font-family: 'Poppins', sans-serif; 
